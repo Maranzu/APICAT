@@ -1,0 +1,172 @@
+const API_URL_RANDOM = 'https://api.thecatapi.com/v1/images/search?limit=2&api_key=live_NHu4MdaV15QUEO4uFJZIHjQTtAGra4dFzLvP0FvJGqOGQrtHv4tSZARGeeVEO7VP';
+const API_URL_FAVOURITES = 'https://api.thecatapi.com/v1/favourites?limit=40&api_key=live_NHu4MdaV15QUEO4uFJZIHjQTtAGra4dFzLvP0FvJGqOGQrtHv4tSZARGeeVEO7VP';
+const API_URL_FAVOURITES_DELETE = (id) =>`https://api.thecatapi.com/v1/favourites/${id}?limit=40&api_key=live_NHu4MdaV15QUEO4uFJZIHjQTtAGra4dFzLvP0FvJGqOGQrtHv4tSZARGeeVEO7VP`;
+const spanError = document.getElementById('error');
+const img1 = document.getElementById('img1');
+const img2 = document.getElementById('img2');
+const btn1 = document.getElementById('btn1');
+const btn2 = document.getElementById('btn2');
+
+const button = document.querySelector('button');
+
+async function generarGatosRandom() {
+    const res = await fetch(API_URL_RANDOM);
+    const data = await res.json();
+    console.log('Gatos aleatorios');
+    console.log(data);
+    if (res.status !== 200) {
+        spanError.innerHTML = 'Hubo un error: ' + res.status;
+    } else {
+        img1.src = data[0].url;
+        img2.src = data[1].url;
+        btn1.onclick = () => guardarGatitosFavoritos(data[0].id);
+        btn2.onclick = () => guardarGatitosFavoritos(data[1].id);
+    }
+}
+
+async function cargarGatosFavoritos() {
+    const res = await fetch(API_URL_FAVOURITES); //fetch por defecto usa el método GET
+    const data = await res.json();
+    console.log('Gatos favoritos');
+    console.log(data);
+    if (res.status !== 200) {
+        spanError.innerHTML = "Hubo un error: " + res.status + data.message;
+    } else {
+        const section = document.getElementById('gatosFavoritos');
+        section.innerHTML = "";
+        data.forEach(gato => {
+            const h2 = document.createElement('h2');
+            const h2Text = document.createTextNode('Gatos favoritos');
+            const article = document.createElement('article');
+            const img = document.createElement('img');
+            const btn = document.createElement('button');
+            const btnText = document.createTextNode('Eliminar de favoritos');
+
+            btn.appendChild(btnText);
+            img.src = gato.image.url;
+            img.width = 150;
+            btn.onclick = () => eliminarGatitosFavoritos(gato.id);
+            article.appendChild(img);
+            article.appendChild(btn);
+            section.appendChild(article);
+        });
+    }
+}
+
+
+async function guardarGatitosFavoritos(id) {
+    const res = await fetch(API_URL_FAVOURITES,
+        {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                image_id: id
+            }),
+        });
+    const data = await res.json();
+    if (res.status !== 200) {
+        spanError.innerHTML = "Hubo un error: " + res.status + data.message;
+    } else {
+        console.log('Guardado en favoritos');
+        cargarGatosFavoritos();
+    }
+}
+
+async function eliminarGatitosFavoritos(id) {
+    const res = await fetch(API_URL_FAVOURITES_DELETE(id),
+        {
+            method: 'DELETE',
+            headers: { 
+                'Content-Type': 'application/json',
+            },
+        });
+    const data = await res.json();
+    
+    if (res.status !== 200) {
+        spanError.innerHTML = "Hubo un error: " + res.status + data.message;
+    } else {
+        console.log('Gatito eliminado');
+        cargarGatosFavoritos();
+    }
+}
+
+generarGatosRandom();
+cargarGatosFavoritos();
+------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API CAT</title>
+</head>
+<body>
+    <h1>InstantCAT App</h1>
+    <p id="error"></p>
+    <section id="gatosAleatorios">
+        <h2>Gatitos aleatorios</h2>
+        <article>
+            <img id="img1" width="150" alt="Foto de gatito aleatorio">
+            <button id="btn1" >Guardar en favoritos</button>
+        </article>
+        <article>
+            <img id="img2" width="150" alt="Foto de gatito aleatorio">
+            <button id="btn2">Guardar en favoritos</button>
+        </article>
+        <button onclick="generarGatosRandom()">Recargar</button>
+    </section>
+    
+    <section id="gatosFavoritos">
+        <!-- <article>
+            <img id="img1" width="150" alt="Foto de gatito aleatorio" src="">
+            <button>Eliminar de favoritos</button>
+        </article> -->
+    </section>
+    <script src="./main.js"></script>
+</body>
+</html>
+--------------------------------------------------------------------------------------------------------------------------------
+/* fetch(URL)
+    .then(res => res.json())
+    .then(data => {
+        img.src = data[0].url;
+    }) */
+/*
+function showCat() {
+    fetch (url)
+    .then(res => res.json())
+    .then(data => {
+        img.src = data[0].url
+    })
+}
+*/
+/*
+async function showCat() {
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        img.src = data[0].url;
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+*/
+/*
+async function showCat() {
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+
+        for (let i = 0; i < data.length; i++) {
+            const imgElement = document.getElementById(`img${i + 1}`);
+            imgElement.src = data[i].url;
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+*/

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FacebookCat</title>
+    <link rel="icon" type="image/png" href="./images/gatitoWhite.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP&family=Poppins:wght@200;300;800&family=Quicksand:wght@300;500;700&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="homeSearchbar">
+            <a href="index.html">FaceCat <img src="./images/gatitoWhite.png" alt="logo" class="logoCat"></a>
+            <div class="searchBar">
+                <img src="images/searchWhite.png" alt="search" class="logoSearch"><input type="text" class="searchInput" placeholder="Search FacebookCat">
+            </div>
+        </div>
+        <div class="iconbar">
+            <div class="listBar">
+                <a href="index.html"><img src="./images/houseWhite.png" alt="house logo" class="logoHouse"></a>
+            </div>
+            <div class="listBar">
+                <a href="index.html"><img src="./images/friendWhite.png" alt="friend logo" class="logoFriend"></a>
+            </div>
+            <div class="listBar">
+                <a href="index.html"><img src="./images/groupWhite.png" alt="group logo" class="logoGroup"></a>
+            </div>
+        </div>
+        <div class="secondIconbar">
+            <input type="submit" class="findFriends" value="Find FriendsCats">
+            <div class="listBar2">
+                <a href="index.html"><img src="./images/menuWhite.png" alt="house logo" class="logoMenu"></a>
+            </div>
+            <div class="listBar2">
+                <a href="index.html"><img src="./images/messengerWhite.png" alt="house logo" class="logoMessenger"></a>
+            </div>
+            <div class="listBar2">
+                <a href="index.html"><img src="./images/notificationWhite.png" alt="house logo" class="logoNotification"></a>
+            </div>
+            <div class="listBar2">
+                <a href="index.html"><img src="" alt="house logo" id="list11" class="avatar"></a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="sideBar">
+            <div class="list">
+                <img src="" alt="catImgAvatar" id="list"><a href="index.html">User</a>
+            </div>
+            <div class="listWithoutBorder">
+                <img src="./images/friend+.png" alt="catImgAvatar"><a href="index.html">Find FrienCats</a>
+            </div>
+            <div class="listWithoutBorder">
+                <img src="./images/group+.png" alt="catImgAvatar"><a href="index.html">Groups</a>
+            </div>
+            <div class="listWithoutBorder">
+                <img src="./images/reloj+.png" alt="catImgAvatar"><a href="index.html">Memories</a>
+            </div>
+            <div class="listWithoutBorder">
+                <img src="./images/saved+.png" alt="catImgAvatar"><a href="index.html">Saved</a>
+            </div>
+            <div class="listWithoutBorder">
+                <img src="./images/video+.png" alt="catImgAvatar"><a href="index.html">Video</a>
+            </div>
+            <div class="listWithoutBorder">
+                <img src="./images/market+.png" alt="catImgAvatar"><a href="index.html">MarketPlace</a>
+            </div>
+            <div class="listWithoutBorder">
+                <img src="./images/noticias+.png" alt="catImgAvatar"><a href="index.html">Feeds</a>
+            </div>
+            <div class="listWithoutBorder">
+                <img src="./images/event+.png" alt="catImgAvatar"><a href="index.html">Events</a>
+            </div>
+            <div class="listFinal">
+                <div class="ListFinalDivContainer">
+                    <div class="ListFinalDivContainer2">
+                        <a href="index.html" class="a1">
+                            <img src="./images/line+.png" alt="catImgAvatar">
+                        </a>
+                    </div>
+                </div>
+                <a href="index.html" class="a2">See more</a>
+            </div>
+            <div class="miniTitle">
+                <h4>Your Shortcuts</h4>
+            </div>
+        </div>
+        <div class="content">
+            <section id="gatosAleatorios" class="sectionAleatorio">
+                <h1>InstantCAT App</h1>
+                <h2>Gatitos aleatorios</h2>
+                <article>
+                    <img id="img1" alt="Foto de gatito aleatorio">
+                    <button id="btn1" >Guardar en favoritos</button>
+                </article>
+
+                <article>
+                    <img id="img2" alt="Foto de gatito aleatorio">
+                    <button id="btn2">Guardar en favoritos</button>
+                </article>
+                <button onclick="generarGatosRandom()">Recargar</button>
+            </section>
+
+            <section id="gatosFavoritos">
+
+            </section>
+        </div>
+        <div class="secondSideBar">
+            <div class="contactSearch">
+                <h4>Contacts</h4>
+                <div class="contactSearchContainer">
+                    <img src="./images/searchWhite.png" alt="logoSearch" class="logoSearch2">
+                </div>
+                <div class="contactSearchContainer">
+                    <img src="./images/suspensivePoints+.png" alt="suspensiveLogo" class="suspensiveLogo">
+                </div>
+            </div>
+            <div class="list">
+                <img src="" alt="catImgAvatar" id="list2"><a href="index.html">User</a>
+            </div>
+            <div class="list">
+                <img src="" id="list3" alt="catImgAvatar"><a href="index.html">User</a>
+            </div>
+            <div class="list">
+                <img src="" id="list4" alt="catImgAvatar"><a href="index.html">User</a>
+            </div>
+            <div class="list">
+                <img src="" id="list5" alt="catImgAvatar"><a href="index.html">User</a>
+            </div>
+            <div class="list">
+                <img src="" id="list6" alt="catImgAvatar"><a href="index.html">User</a>
+            </div>
+            <div class="list">
+                <img src="" id="list7" alt="catImgAvatar"><a href="index.html">User</a>
+            </div>
+            <div class="list">
+                <img src="" id="list8" alt="catImgAvatar"><a href="index.html">User</a>
+            </div>
+            <div class="list">
+                <img src="" id="list9" alt="catImgAvatar"><a href="index.html">User</a>
+            </div>
+            <div class="miniTitle">
+                <h4>Group conversations</h4>
+            </div>
+            <div class="list">
+                <img src="" id="list10" alt="catImgAvatar"><a href="index.html">User</a>
+            </div>
+        </div>
+    </div>
+    <script src="main.js">
+
+    </script>
+</body>
+</html>

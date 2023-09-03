@@ -1,0 +1,413 @@
+* {
+    font-family: Quicksand;
+    background-color: var(--dark);
+    --white: #fff;
+    --gray: #3a3b3c;
+    --dark: #18191a;
+    --semidark: #242526;
+    --semiWhite: #b0b3b8;
+    --logoSize: 25px;
+    --small: 12px;
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+}
+/*Controlador de cabecera*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--semidark);
+    padding: 6px;
+}
+.navbar a {
+    text-decoration: none;
+    color: var(--white);
+    text-align: left;
+    font-size: var(--logoSize);
+    background-color: transparent;
+    max-height: 30px;
+}
+/*SearchBar*/
+.searchBar {
+    background-color: var(--gray);
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: solid 0.5px var(--gray);
+}
+.homeSearchbar {
+    display: flex;
+    background-color: var(--semidark);
+}
+.searchInput {
+    background-color: var(--gray);
+    width: 200px;
+    position: relative;
+    outline: none;
+    border: none;
+    color: var(--white);
+    margin-bottom: 2px;
+}
+/*LOGOS DE LA INTERFAZ*/
+.logoSearch {
+    height: 25px;
+    width: 25px;
+    margin-bottom: -8px;
+    background-color: transparent;
+}
+.logoCat {
+    height: 50px;
+    width: 50px;
+    margin-bottom: -10px;
+    background-color: var(--semidark);
+}
+.logoHouse {
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    margin-top: 4px;
+}
+.logoFriend {
+    height: 28px;
+    width: 28px;
+    margin-top: 3px;
+    background-color: transparent;
+}
+.logoGroup {
+    height: 28px;
+    width: 28px;
+    margin-top: 3px;
+    background-color: transparent;
+}
+.logoMenu {
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+}
+.logoMessenger {
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+}
+.logoNotification {
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+}
+.findFriends {
+    background-color: var(--gray);
+    border: 1px solid var(--gray);
+    font-size: 500;
+    border-radius: 15px;
+    height: 35px;
+    font-weight: bold;
+    color: var(--white);
+}
+/*DIV DE CONTROL DE ÍCONOS*/
+.iconbar {
+    display: flex;
+    width: 500px;
+    justify-content: space-evenly;
+    background-color: var(--semidark);
+}
+.secondIconbar {
+    display: flex;
+    width: 300px;
+    justify-content: space-evenly;
+    background-color: var(--semidark);
+}
+.listBar {
+    height: 40px;
+    width: 80px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+.listBar:hover {
+    background-color: var(--gray);
+    height: 40px;
+    width: 80px;
+    border: 1px var(--gray);
+    border-radius: 4px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.listBar2 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--gray);
+    height: 40px;
+    width: 40px;
+    border: 1px var(--gray);
+    border-radius: 50px;
+}
+/*SIDEBAR*/
+.sideBar {
+    width: 250px;
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/*USER*/
+.list {
+    height: 40px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+.list:hover {
+    background-color: var(--semidark);
+}
+.list img {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    border-radius: 50px;
+}
+.list a {
+    text-decoration: none;
+    background-color: transparent;
+    margin-left: 5px;
+    width: 100%;
+}
+/*OPTIONS*/
+.listWithoutBorder {
+    height: 40px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+.listWithoutBorder:hover {
+    background-color: var(--semidark);
+}
+.listWithoutBorder img {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    background-color: transparent;
+}
+.listWithoutBorder a {
+    text-decoration: none;
+    background-color: transparent;
+    margin-left: 5px;
+    width: 100%;
+}
+/*FINAL OPTION*/
+.listFinal {
+    height: 40px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+.listFinal:hover {
+    background-color: var(--semidark);
+}
+.ListFinalDivContainer {
+    background-color: var(--gray);
+    display: flex;
+    justify-content: center;
+    border: 1px var(--gray);
+    border-radius: 20px;
+    margin: 10px;
+}
+.ListFinalDivContainer2 {
+    background-color: var(--gray);
+    border: 1px var(--gray);
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.ListFinalDivContainer2 img {
+    height: 10px;
+    width: 10px;
+    background-color: transparent;
+}
+.a1 {
+    text-decoration: none;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.a2 {
+    text-decoration: none;
+    background-color: transparent;
+    width: 100%;
+}
+/*MINI TITLE*/
+.miniTitle {
+    background-color: transparent;
+    border-top: 1px solid var(--gray);
+    display: flex;
+    margin-bottom: 15px;
+}
+.miniTitle h4 {
+    margin-top: 10px;
+}
+/*CONTENT*/
+.container {
+    display: flex;
+}
+.content {
+    flex: 1;
+    padding: 20px;
+}
+/*SECOND SIDE BAR*/
+.secondSideBar {
+    width: 250px;
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.contactSearch {
+    display: flex;
+    align-items: center;
+}
+.contactSearch h4 {
+    flex: 1;
+}
+.logoSearch2 {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    padding: 10px;
+}
+.suspensiveLogo {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    padding: 10px;
+}
+.avatar {
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: 1px var(--gray);
+    border-radius: 50%;
+}
+/*CARD ARTICLE*/
+.sectionPost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cardArticle {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    background-color: var(--semidark);
+    border: 1px solid var(--semidark);
+    border-radius: 6px;
+}
+.cardArticleImg {
+    height: 330px;
+    width: 400px;
+    border: 1px solid var(--gray);
+}
+.headerDiv {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    border: 1px solid var(--gray);
+    border-radius: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.imgHeader {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    padding: 10px;
+}
+.subDiv {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+.subDiv p {
+    font-size: var(--small);
+    color: var(--semiWhite);
+}
+.finalSubDiv {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+.finalSubDivImg {
+    height: 15px;
+    width: 15px;
+    background-color: transparent;
+}
+.finalSubDivButton {
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+.finalSubDivButton:hover {
+    padding: 5px;
+    border: 1px solid var(--gray);
+    background-color: var(--gray);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+.sectionAleatorio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sectionAleatorio article {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    background-color: var(--semidark);
+    border: 1px solid var(--semidark);
+    border-radius: 6px;
+}
+.sectionAleatorio img {
+    height: 330px;
+    width: 400px;
+    border: 1px solid var(--gray);
+    border-radius: 15px;
+}
