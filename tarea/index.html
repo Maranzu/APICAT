@@ -89,23 +89,38 @@
             </div>
         </div>
         <div class="content">
+            <div class="headerTitle">
+                <h1>FacebookCat App</h1>
+            </div>
+            <div class="headerOptions">
+                <button onclick="generarGatosRandom()">
+                <img src="./images/reload.svg" alt="reloadIcon">
+                </button>
+                <button>
+                    <img src="./images/add.svg" alt="addIcon">
+                </button>
+            </div>
             <section id="gatosAleatorios" class="sectionAleatorio">
-                <h1>InstantCAT App</h1>
-                <h2>Gatitos aleatorios</h2>
+                <h2>Random Cats</h2>
                 <article>
-                    <img id="img1" alt="Foto de gatito aleatorio">
-                    <button id="btn1" >Guardar en favoritos</button>
+                    <img id="img1" alt="Foto de gatito aleatorio" class="sectionAleatorioImg">
+                    <div class="sectionAleatorioBtn">
+                        <button id="btn1">
+                            <img src="./images/heart.svg" alt="heartLogo">
+                        </button>
+                    </div>
                 </article>
 
                 <article>
-                    <img id="img2" alt="Foto de gatito aleatorio">
-                    <button id="btn2">Guardar en favoritos</button>
+                    <img id="img2" alt="Foto de gatito aleatorio" class="sectionAleatorioImg">
+                    <div class="sectionAleatorioBtn">
+                        <button id="btn2">
+                            <img src="./images/heart.svg" alt="heartLogo">
+                        </button>
+                    </div>
                 </article>
-                <button onclick="generarGatosRandom()">Recargar</button>
             </section>
-
             <section id="gatosFavoritos">
-
             </section>
         </div>
         <div class="secondSideBar">

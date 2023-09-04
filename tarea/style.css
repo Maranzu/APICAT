@@ -271,6 +271,36 @@
     flex: 1;
     padding: 20px;
 }
+.headerTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerOptions {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+.headerOptions button {
+    min-width: 200px;
+    height: 30px;
+    background-color: var(--semidark);
+    border: 1px transparent;
+    border-radius: 6px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.headerOptions button:hover {
+    background-color: var(--gray);
+    border: 1px transparent;
+}
+.headerOptions button img {
+    background-color: transparent;
+}
 /*SECOND SIDE BAR*/
 .secondSideBar {
     width: 250px;
@@ -404,10 +434,37 @@
     background-color: var(--semidark);
     border: 1px solid var(--semidark);
     border-radius: 6px;
+    margin: 10px;
 }
-.sectionAleatorio img {
+.sectionAleatorioImg {
     height: 330px;
     width: 400px;
     border: 1px solid var(--gray);
     border-radius: 15px;
+}
+.sectionAleatorioBtn {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    background-color: transparent;
+}
+.sectionAleatorioBtn img {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+}
+.sectionAleatorioBtn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    margin: 5px;
+    border: 1px transparent;
+    border-radius: 6px;
+    padding: 2px;
+    background-color: var(--dark);
+    cursor: pointer;
+}
+.sectionAleatorioBtn button:hover {
+    background-color: var(--gray);
 }
